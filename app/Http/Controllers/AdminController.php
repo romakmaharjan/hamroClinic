@@ -16,18 +16,22 @@ class AdminController extends Controller
     {
         $doctor=new Doctor;
         $image=$request->file('file');
-        $imagename = time().'.'.$image->getClientOriginalExtension();
 
-        $request->move(public_path('doctorimage'),$imagename);
+          if ($image) {
+            $imagename = time().'.'.$image->getClientOriginalExtension();
+            $image->move(public_path('doctorimage'), $imagename);
+            $doctor->image = $imagename;
+        } else {
+            return redirect()->back()->with('error', 'File upload failed. Please try again.');
+        }
 
-        $doctor->image=$imagename;
-        $doctor->name=$request->input('name');
-        $doctor->phone=$request->input('number');
-        $doctor->room=$request->input('room');
-        $doctor->specialty=$request->input('specialty');
+        $doctor->name = $request->input('name');
+        $doctor->phone = $request->input('number');
+        $doctor->room = $request->input('room');
+        $doctor->specialty = $request->input('specialty');
 
         $doctor->save();
 
-        return redirect()->back();
+         return redirect()->back()->with('message', 'Doctor added successfully');
     }
 }
