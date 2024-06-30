@@ -49,7 +49,7 @@
                         <td>{{$doctor->specialty}}</td>
                         <td>{{$doctor->room}}</td>
                         <td><img src="doctorimage/{{$doctor->image}}" width="100" height="100"></td>
-                        <td><a href="" class="btn btn-success">Update</a></td>
+                        <td><a href="{{url('updatedoctor',$doctor->id)}}" class="btn btn-success">Update</a></td>
                         <td><a onclick="return confirm('Are you sure to delete this')" href="{{url('deletedoctor',$doctor->id)}}" class="btn btn-danger">Delete</a></td>
                  </tr>
                     @endforeach

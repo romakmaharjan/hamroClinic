@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-  <title>One Health - Medical Center HTML5 Template</title>
+  <title>Hamro clinic - Be Healthy Be Care & Save</title>
 
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -50,7 +50,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
+        <a class="navbar-brand" href="#"><span class="text-primary">Hamro</span>-Clinic</a>
 
         <form action="#">
           <div class="input-group input-navbar">
