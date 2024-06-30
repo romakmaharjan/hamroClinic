@@ -72,3 +72,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # Admin
 # username->admin@gmail.com
 # password->adminclinic1
+
+## you can also download database sql file .
